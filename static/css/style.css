@@ -1,9 +1,8 @@
 body{
+	background-image: url("background.gif");
 	font:20px/1.5 Helvetica,sans-serif;
 	color: white;
 	padding: 0px;
-
-	background-image: url("background.gif");
 	
 }
 
