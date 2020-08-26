@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div id="brandname">
+				<h1>Rock Paper Scissor - The Game </h1>
+				Version 1.0 | Released on 26-Aug-2020
+			</div>
+		</div>
+		<dev class="dev_cont">Developer contact</br>
+					Email: <a href = "mailto: rajat.visitme@gmail.com" target="blank">rajat.visitme@gmail.com</a>
+		<dev>
+	</header>
+
+	<div class="ml-container">
+
+		<!-- creating a form for end-user to interact with our home page.
+			 Here, user can upload their own image or select the number of samples to run test on them.
+			 Samples will be first download from web by web scrapping and then will passed to model for processing.-->
+		<form action="{{ url_for('home')}}" enctype=multipart/form-data>
+			<input type="submit" class="btn-info" value="Home">
+		</form>
+		<form action="{{ url_for('rps_mode')}}" method="POST" enctype=multipart/form-data>
+			<h2>{{message}}</h2>
+			<center>
+				<h3>How to play:</h3>
+				Choose anyone (Rock, Paper, or Scissors).</br>
+				Computer will also choose one.</br>
+				Rock can beat Scissors, Scissors can beat Paper, and Paper can beat Rock.<hr width="50%">
+
+				<h3>Select your mode</h3>
+				
+				Play with AI (Moderate) :<input type="radio" id= "mode2" value="2" name="mode" required> |
+				Play with AI (Hard) :<input type="radio" id= "mode3" value="3" name="mode" required></br></br>
+				<font color="grey">Play with your friend : Available soon</br>
+				Play with AI (Easy) : Available soon</br>
+				Play with AI (ExtremeHard) : Available soon</font></br></br>
+
+
+				<input type="submit" class="btn-info" value="PLAY">
+			</center>
+
+		</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>

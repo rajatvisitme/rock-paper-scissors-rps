@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div id="brandname">
+				<h1>Rock Paper Scissor - The Game </h1>
+				Version 1.0 | Released on 26-Aug-2020
+			</div>
+		</div>
+		<dev class="dev_cont">Developer contact</br>
+					Email: <a href = "mailto: rajat.visitme@gmail.com" target="blank">rajat.visitme@gmail.com</a>
+		<dev>
+	</header>
+	<br>
+	<div class="results">
+		
+		<form action="{{ url_for('home')}}" enctype=multipart/form-data>
+			<input type="submit" class="btn-info" value="Home">
+		</form>
+		<form action="{{ url_for('rps_home')}}" method="POST" enctype=multipart/form-data>
+			<input type="submit" class="btn-info" value="Change Mode">
+			<b>{{message[0]}} active.</b>
+		</form>
+		<form action="{{ url_for('rps_play')}}" method="POST" enctype=multipart/form-data>
+			
+			<center>
+
+				<h3>Choose your move</h3></br>
+				Rock :<input type="radio" id= "rock" value="1" name="player_choice" required></br>
+				Paper :<input type="radio" id= "paper" value="2" name="player_choice" required></br>
+				Scissors :<input type="radio" id= "scissors" value="3" name="player_choice" required></br>
+				<input type="submit" class="btn-info" value="PLAY"></br></br>
+				<h3>{{message[1]}}</h3>
+			</center>
+			
+		</form>
+	
+	</div>
+
+</body>
+</html>

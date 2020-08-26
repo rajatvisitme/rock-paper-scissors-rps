@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div id="brandname">
+				<h1>Games on Demand - GOD </h1>
+				Version 1.0
+			</div>
+		</div>
+		<dev class="dev_cont">Developer contact</br>
+					Email: <a href = "mailto: rajat.visitme@gmail.com" target="blank">rajat.visitme@gmail.com</a>
+		<dev>
+	</header>
+
+	<div class="ml-container">
+
+		<!-- creating a form for end-user to interact with our home page.
+			 Here, user can upload their own image or select the number of samples to run test on them.
+			 Samples will be first download from web by web scrapping and then will passed to model for processing.-->
+		<form action="{{ url_for('home')}}" method="POST" enctype=multipart/form-data>
+			
+			<center>
+				<h3>Select your Game</h3>
+				
+				Rock Paper Scissors :<input type="radio" id= "game1" value="rock_paper_scissors" name="game_name" required></br></br>
+				<font color="grey">Tick Tac Toe : Available soon</br>
+				Chess : Available soon</br></font>
+				............ : ..............</br>
+				<input type="submit" class="btn-info" value="PLAY"></br>
+			</center>
+
+		</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
