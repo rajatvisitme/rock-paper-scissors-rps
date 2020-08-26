@@ -21,9 +21,6 @@
 
 	<div class="ml-container">
 
-		<!-- creating a form for end-user to interact with our home page.
-			 Here, user can upload their own image or select the number of samples to run test on them.
-			 Samples will be first download from web by web scrapping and then will passed to model for processing.-->
 		<form action="{{ url_for('home')}}" method="POST" enctype=multipart/form-data>
 			
 			<center>
